@@ -4,12 +4,12 @@ import { getStorage } from "firebase/storage";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
-	apiKey: "AIzaSyCaZ3HykojnO35zvofMhcm4EsAbwy8wfII",
+	apiKey: process.env.REACT_APP_FIREBASE_KEY,
 	authDomain: "wuna-voting-system.firebaseapp.com",
 	projectId: "wuna-voting-system",
-	storageBucket: "wuna-voting-system.appspot.com",
-	messagingSenderId: "212103053634",
-	appId: "1:212103053634:web:aedd484527b4f45742c8db",
+	storageBucket: process.env.STORAGE_BUCKET,
+	messagingSenderId: process.env.SENDER_ID,
+	appId: process.env.APP_ID,
 };
 
 // Initialize Firebase
