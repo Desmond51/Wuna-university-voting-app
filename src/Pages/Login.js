@@ -10,7 +10,8 @@ function Login({ setIsAuth }) {
 		signInWithPopup(auth, provider).then((result) => {
 			localStorage.setItem("isAuth", true);
 			setIsAuth(true);
-			navigate("/createpost");
+			navigate("/add");
+			console.log("After sign in", result.user);
 		});
 	};
 
